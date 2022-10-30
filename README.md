@@ -37,7 +37,7 @@ PackageCloud, which both options depend on, is not a free service. So, if you ca
 help with these costs please [**Sponsor**](https://github.com/sponsors/shiftkey) the project
 using the link in the header.
 
-### Debian/Ubuntu distributions
+### Debian/Ubuntu distributions (apt)
 
 First install our GPG certificate:
 
@@ -59,6 +59,31 @@ Then install GitHub Desktop:
 
 ```sh
 $ sudo apt update && sudo apt install github-desktop
+```
+
+### Debian/Ubuntu distributions (deb-get)
+
+For users of Debian and Ubuntu based distributions, you can also install and
+update the `.deb` packages we publish in our GitHub releases page using [deb-get](https://github.com/wimpysworld/deb-get).
+
+First install `deb-get` using these commands in a terminal:
+
+```sh
+sudo apt install curl
+curl -sL https://raw.githubusercontent.com/wimpysworld/deb-get/main/deb-get | sudo -E bash -s install deb-get
+```
+
+Then install GitHub Desktop using the following command in terminal:
+
+```sh
+deb-get install github-desktop
+```
+
+Once GitHub Desktop is installed it can be kept up to date using:
+
+```sh
+deb-get update
+deb-get upgrade
 ```
 
 ### Red Hat/CentOS/Fedora distributions
